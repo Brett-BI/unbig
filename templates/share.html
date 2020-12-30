@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        .url {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Share this link</h1> 
+
+    <div>
+        <p>{{ url_id }}</p>
+        <a href="{{ url_for('get', uid=url_id, _external=True) }}">{{ url_for('get', uid=url_id, _external=True) }}</a>
+        <p><span class="url">http://127.0.0.1:5000/{{ url_id }}</span></p>
+        <button class="btn" id="copy">Copy</button>
+    </div>
+</body>
+</html>
